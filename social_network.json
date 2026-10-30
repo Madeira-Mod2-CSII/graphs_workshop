@@ -1,0 +1,74 @@
+{
+    "Liam": [
+        "Emma",
+        "Raj",
+        "Sofia"
+    ],
+    "Emma": [
+        "Liam",
+        "Raj",
+        "Chen"
+    ],
+    "Raj": [
+        "Liam",
+        "Emma",
+        "Priya",
+        "Sofia"
+    ],
+    "Sofia": [
+        "Liam",
+        "Raj",
+        "Priya"
+    ],
+    "Chen": [
+        "Emma",
+        "Aiko",
+        "Noah"
+    ],
+    "Priya": [
+        "Raj",
+        "Sofia",
+        "Arjun"
+    ],
+    "Aiko": [
+        "Chen",
+        "Yuki",
+        "Noah"
+    ],
+    "Noah": [
+        "Chen",
+        "Aiko",
+        "Maya"
+    ],
+    "Yuki": [
+        "Aiko",
+        "Maya"
+    ],
+    "Maya": [
+        "Noah",
+        "Yuki",
+        "Ethan"
+    ],
+    "Arjun": [
+        "Priya",
+        "Ethan",
+        "Fatima"
+    ],
+    "Ethan": [
+        "Maya",
+        "Arjun",
+        "Olivia"
+    ],
+    "Fatima": [
+        "Arjun",
+        "Olivia"
+    ],
+    "Olivia": [
+        "Ethan",
+        "Fatima",
+        "Isabella"
+    ],
+    "Isabella": [
+        "Olivia"
+    ]
+}
