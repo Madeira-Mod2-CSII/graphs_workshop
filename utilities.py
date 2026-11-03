@@ -3,16 +3,16 @@ def bfs(network, source):
     Purpose: Perform a breadth-first search on network starting
     from the source.
 
-    Parameters: 
+    Parameters:
         network - a graph adjacency list; dict
         source - the node in the network from which to start
         the BFS.
 
-    Return Values: 
+    Return Values:
         distance - the distance from the source to any other node; dict
         predecessor - the predecessor for each note resulting from 
         a BFS run; dict
-    '''    
+    '''
     # Dictionaries to track which nodes have been visited,
     # the distance from the source, and the predecessors
 
@@ -65,17 +65,30 @@ def path(network, source, dest):
     '''
 
 def node_query(network, source, dist):
-    '''
-    Purpose: To return a list containing all nodes in the network
-    that are dist distance from the source.
+   
+    if dist == 0:
+        return [source] if source in network else []
 
-    Parameters:
-        network - graph adjacency list; dict
-        source - the node to start the BFS run
-        dist - the desired distance of the nodes to be found.
+    queue = deque([(source, 0)])
+    visited = {source}
+    result = []
 
-    Return Value: A list of nodes with dist dist after a BFS run.; list
-    '''
+    while queue:
+        current, current_dist = queue.popleft()
+
+        if current_dist == dist:
+            result.append(current)
+            continue
+        
+        if current_dist > dist:
+            break
+
+        for neighbor in network.get(current, []):
+            if neighbor not in visited:
+                visited.add(neighbor)
+                queue.append((neighbor, current_dist + 1))
+
+    return result
 
 def is_connected(network):
     '''
